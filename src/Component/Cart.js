@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { CartContext } from "../App";
+import { CartContext } from "../Context/CartContext";
 import "./Cart.css";
 import Subtotal from "./Subtotal";
 function Cart() {
@@ -32,7 +32,7 @@ function Cart() {
         {cartItems.map((data, index) => {
           return (
             <div className="cart__contains__map" key={index}>
-              <h3 classNmae="product__title">{data.title}</h3>
+              <h3>{data.title}</h3>
               <p className="product__desc">{data.description}</p>
               <strong>{data.price} $</strong>
               <strong>Quantity : {data.qty} </strong>

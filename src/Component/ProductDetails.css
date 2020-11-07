@@ -21,8 +21,7 @@
     width: auto;
     height: 100%;
   }
-  .product__cart {
-  }
+
   .productDetails__right {
     width: 100%;
   }
@@ -30,15 +29,7 @@
 .product {
   border-radius: 1rem;
 }
-.productDetails__left_input_btn {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-self: center;
-}
-.productDetails__left_input_btn > strong {
-  padding: 12px;
-}
+
 .productDetails__left {
   padding: 20px;
   flex: 0.4;
@@ -68,7 +59,7 @@
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.productDetails__left > input {
+.productDetails__right > input {
   padding: 12px;
   margin: 5px;
 }

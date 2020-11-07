@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { MoonLoader } from "react-spinners";
-import { CartContext } from "../App";
+import { CartContext } from "../Context/CartContext";
 import "./ProductDetails.css";
 
 function ProductDetails() {
@@ -41,26 +41,33 @@ function ProductDetails() {
           src={productDetails.image}
           alt="Loading Image"
         ></img>
-        <div className="productDetails__left_input_btn">
-          <strong>Quantity</strong>
-          <input type="number" value={qty} readOnly />
-          <button
-            onClick={() => {
-              setQty(qty + 1);
-            }}
-            className="product__qty"
-          >
-            +
-          </button>
-          <button
-            onClick={() => {
-              decrementQty();
-            }}
-            className="product__qty"
-          >
-            -
-          </button>
-        </div>
+      </div>
+      <div className="productDetails__right">
+        <h1>{productDetails.title}</h1>
+        <p>{productDetails.description}</p>
+        <strong>Category : {productDetails.category}</strong>
+        <h3>
+          Price : <span></span>
+          {productDetails.price} $
+        </h3>
+        <strong>Quantity</strong>
+        <input type="number" value={qty} readOnly />
+        <button
+          onClick={() => {
+            setQty(qty + 1);
+          }}
+          className="product__qty"
+        >
+          +
+        </button>
+        <button
+          onClick={() => {
+            decrementQty();
+          }}
+          className="product__qty"
+        >
+          -
+        </button>
         <button
           onClick={() => {
             context.dispatchState({
@@ -72,15 +79,6 @@ function ProductDetails() {
         >
           ADD TO CART
         </button>
-      </div>
-      <div className="productDetails__right">
-        <h1>{productDetails.title}</h1>
-        <p>{productDetails.description}</p>
-        <strong>Category : {productDetails.category}</strong>
-        <h3>
-          Price : <span></span>
-          {productDetails.price} $
-        </h3>
       </div>
     </div>
   );

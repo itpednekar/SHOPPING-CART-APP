@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import "./PlaceOrder.css";
 import { useFormik } from "formik";
-import { CartContext } from "../App";
+import { CartContext } from "../Context/CartContext";
 import { useHistory } from "react-router-dom";
-import SignIn from "./SignIn";
 
 function PlaceOrder() {
   const context = useContext(CartContext);

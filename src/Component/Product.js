@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { CartContext } from "../App";
+import { CartContext } from "../Context/CartContext";
 import "./Product.css";
 import { MoonLoader } from "react-spinners";
 
@@ -15,9 +15,6 @@ function Product() {
     return (
       i.title.toLowerCase().indexOf(context.cartSearchState.toLowerCase()) !==
         -1 ||
-      i.description
-        .toLowerCase()
-        .indexOf(context.cartSearchState.toLowerCase()) !== -1 ||
       i.category
         .toLowerCase()
         .indexOf(context.cartSearchState.toLowerCase()) !== -1
@@ -91,7 +88,6 @@ function Product() {
               key={index}
             >
               <h3>{data.title}</h3>
-              <p className="product__desc">{data.description}</p>
               <div>
                 <strong>Category : {data.category} -- </strong>
                 <strong style={{ color: "red" }}>{data.price} $</strong>
