@@ -18,7 +18,6 @@ function SignIn() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
         if (auth) {
           setLoader(false);
           history.push("/");

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { CartContext } from "../App";
+import { CartContext } from "../Context/CartContext";
 import "./Subtotal.css";
 
 function Subtotal({ subTotal }) {

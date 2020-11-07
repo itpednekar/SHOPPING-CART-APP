@@ -3,10 +3,10 @@ import "./Header.css";
 import logo from "../Images/dream-2.png";
 import SearchTwoToneIcon from "@material-ui/icons/SearchTwoTone";
 import Badge from "@material-ui/core/Badge";
-import { CartContext } from "../App";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
 import { FaShopify } from "react-icons/fa";
+import { CartContext } from "../Context/CartContext";
 
 function Header() {
   const context = useContext(CartContext);
